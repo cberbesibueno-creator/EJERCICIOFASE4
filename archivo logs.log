@@ -1,0 +1,97 @@
+2026-11-19 21:36:17,222 | INFO     | main | === INICIO DE LA SIMULACIÓN DE SOFTWARE FJ ===
+2026-11-19 21:36:17,222 | INFO     | main | --- Operación 01: Registrar cliente válido (María José)
+2026-11-19 21:36:17,222 | INFO     | gestor | Cliente registrado: Cliente N.° 1: María José | ID: 1098765432 | Correo: maria@gmail.com | Tel: 3001234567
+2026-11-19 21:36:17,222 | INFO     | main | Operación 01 completada correctamente
+2026-11-19 21:36:17,222 | DEBUG    | main | Fin de la operación 01
+2026-11-19 21:36:17,222 | INFO     | main | --- Operación 02: Registrar cliente válido (Carlos Pérez)
+2026-11-19 21:36:17,222 | INFO     | gestor | Cliente registrado: Cliente N.° 2: Carlos Pérez | ID: 1010101010 | Correo: carlos@correo.co | Tel: 3109876543
+2026-11-19 21:36:17,222 | INFO     | main | Operación 02 completada correctamente
+2026-11-19 21:36:17,222 | DEBUG    | main | Fin de la operación 02
+2026-11-19 21:36:17,222 | INFO     | main | --- Operación 03: Cliente INVÁLIDO: correo sin formato correcto
+2026-11-19 21:36:17,222 | ERROR    | main | Operación 03 falló [DatosInvalidosError]: El correo electrónico no tiene un formato válido.
+2026-11-19 21:36:17,222 | DEBUG    | main | Fin de la operación 03
+2026-11-19 21:36:17,222 | INFO     | main | --- Operación 04: Cliente INVÁLIDO: identificación con letras y teléfono corto
+2026-11-19 21:36:17,222 | ERROR    | main | Operación 04 falló [DatosInvalidosError]: La identificación solo debe contener números.
+2026-11-19 21:36:17,222 | DEBUG    | main | Fin de la operación 04
+2026-11-19 21:36:17,222 | INFO     | main | --- Operación 05: Cliente INVÁLIDO: identificación duplicada
+2026-11-19 21:36:17,222 | ERROR    | main | Operación 05 falló [DatosInvalidosError]: Ya existe un cliente con la identificación 1098765432.
+2026-11-19 21:36:17,222 | DEBUG    | main | Fin de la operación 05
+2026-11-19 21:36:17,222 | INFO     | main | --- Operación 06: Crear servicio válido: Sala de reuniones
+2026-11-19 21:36:17,223 | INFO     | gestor | Servicio registrado: Sala 'Sala Ejecutiva' (ID 4) | Capacidad: 12 personas | $50,000 por hora
+2026-11-19 21:36:17,223 | INFO     | main | Operación 06 completada correctamente
+2026-11-19 21:36:17,223 | DEBUG    | main | Fin de la operación 06
+2026-11-19 21:36:17,223 | INFO     | main | --- Operación 07: Crear servicio válido: Alquiler de portátiles
+2026-11-19 21:36:17,223 | INFO     | gestor | Servicio registrado: Equipo 'Portátil Pro' (ID 5) | Unidades: 5 | $30,000 por día
+2026-11-19 21:36:17,223 | INFO     | main | Operación 07 completada correctamente
+2026-11-19 21:36:17,223 | DEBUG    | main | Fin de la operación 07
+2026-11-19 21:36:17,223 | INFO     | main | --- Operación 08: Crear servicio válido: Asesoría en Python
+2026-11-19 21:36:17,223 | INFO     | gestor | Servicio registrado: Asesoría 'Asesoría Python' (ID 6) | Especialidad: Desarrollo de software | $80,000 por hora
+2026-11-19 21:36:17,223 | INFO     | main | Operación 08 completada correctamente
+2026-11-19 21:36:17,223 | DEBUG    | main | Fin de la operación 08
+2026-11-19 21:36:17,223 | INFO     | main | --- Operación 09: Servicio INVÁLIDO: tarifa negativa
+2026-11-19 21:36:17,223 | ERROR    | main | Operación 09 falló [DatosInvalidosError]: La tarifa base debe ser un número mayor que cero.
+2026-11-19 21:36:17,223 | DEBUG    | main | Fin de la operación 09
+2026-11-19 21:36:17,223 | INFO     | main | --- Operación 10: Reserva EXITOSA: sala 3 horas (con IVA 19 %)
+2026-11-19 21:36:17,223 | INFO     | reserva | Reserva 7 creada (cliente 1, servicio 4)
+2026-11-19 21:36:17,223 | INFO     | reserva | Reserva 7 confirmada
+2026-11-19 21:36:17,223 | INFO     | reserva | Reserva 7 procesada. Costo total: 178500.0
+2026-11-19 21:36:17,223 | DEBUG    | reserva | Fin del intento de procesamiento de la reserva 7
+2026-11-19 21:36:17,223 | INFO     | main | Operación 10 completada correctamente
+2026-11-19 21:36:17,223 | DEBUG    | main | Fin de la operación 10
+2026-11-19 21:36:17,223 | INFO     | main | --- Operación 11: Reserva EXITOSA: 2 portátiles por 2 días con 10 % de descuento
+2026-11-19 21:36:17,223 | INFO     | reserva | Reserva 8 creada (cliente 2, servicio 5)
+2026-11-19 21:36:17,223 | INFO     | reserva | Reserva 8 confirmada
+2026-11-19 21:36:17,223 | INFO     | reserva | Reserva 8 procesada. Costo total: 128520.0
+2026-11-19 21:36:17,223 | DEBUG    | reserva | Fin del intento de procesamiento de la reserva 8
+2026-11-19 21:36:17,223 | INFO     | main | Operación 11 completada correctamente
+2026-11-19 21:36:17,223 | DEBUG    | main | Fin de la operación 11
+2026-11-19 21:36:17,223 | INFO     | main | --- Operación 12: Reserva EXITOSA: asesoría 2 horas con tarifa especial
+2026-11-19 21:36:17,223 | INFO     | reserva | Reserva 9 creada (cliente 1, servicio 6)
+2026-11-19 21:36:17,223 | INFO     | reserva | Reserva 9 confirmada
+2026-11-19 21:36:17,223 | INFO     | reserva | Reserva 9 procesada. Costo total: 142800.0
+2026-11-19 21:36:17,223 | DEBUG    | reserva | Fin del intento de procesamiento de la reserva 9
+2026-11-19 21:36:17,223 | INFO     | main | Operación 12 completada correctamente
+2026-11-19 21:36:17,224 | DEBUG    | main | Fin de la operación 12
+2026-11-19 21:36:17,224 | INFO     | main | --- Operación 13: Reserva FALLIDA: el cliente no es un objeto Cliente
+2026-11-19 21:36:17,224 | ERROR    | main | Operación 13 falló [DatosInvalidosError]: El cliente debe ser un objeto de la clase Cliente.
+2026-11-19 21:36:17,224 | DEBUG    | main | Fin de la operación 13
+2026-11-19 21:36:17,224 | INFO     | main | --- Operación 14: Reserva FALLIDA: duración negativa
+2026-11-19 21:36:17,224 | ERROR    | main | Operación 14 falló [DatosInvalidosError]: La duración debe ser mayor que cero.
+2026-11-19 21:36:17,224 | DEBUG    | main | Fin de la operación 14
+2026-11-19 21:36:17,224 | INFO     | main | --- Operación 15: Reserva FALLIDA: equipo reservado en horas (se cobra por día)
+2026-11-19 21:36:17,224 | ERROR    | main | Operación 15 falló [DatosInvalidosError]: El servicio 'Portátil Pro' se reserva en días, no en horas.
+2026-11-19 21:36:17,224 | DEBUG    | main | Fin de la operación 15
+2026-11-19 21:36:17,224 | INFO     | main | --- Operación 16: Reserva FALLIDA: servicio no disponible al confirmar (error encadenado)
+2026-11-19 21:36:17,224 | INFO     | reserva | Reserva 10 creada (cliente 2, servicio 4)
+2026-11-19 21:36:17,224 | ERROR    | reserva | Reserva 10: no se pudo confirmar (El servicio 'Sala Ejecutiva' no está disponible.)
+2026-11-19 21:36:17,224 | ERROR    | main | Operación 16 falló [ReservaError]: No se pudo confirmar la reserva 10.
+2026-11-19 21:36:17,224 | ERROR    | main |    Causa original [ServicioNoDisponibleError]: El servicio 'Sala Ejecutiva' no está disponible.
+2026-11-19 21:36:17,224 | DEBUG    | main | Fin de la operación 16
+2026-11-19 21:36:17,224 | INFO     | main | --- Operación 17: Operación NO PERMITIDA: procesar una reserva sin confirmar
+2026-11-19 21:36:17,224 | INFO     | reserva | Reserva 11 creada (cliente 1, servicio 4)
+2026-11-19 21:36:17,224 | ERROR    | main | Operación 17 falló [OperacionNoPermitidaError]: Solo se pueden procesar reservas confirmadas.
+2026-11-19 21:36:17,224 | DEBUG    | main | Fin de la operación 17
+2026-11-19 21:36:17,224 | INFO     | main | --- Operación 18: Cálculo INCONSISTENTE: descuento del 100 % (error encadenado)
+2026-11-19 21:36:17,224 | INFO     | reserva | Reserva 12 creada (cliente 1, servicio 4)
+2026-11-19 21:36:17,224 | INFO     | reserva | Reserva 12 confirmada
+2026-11-19 21:36:17,224 | ERROR    | reserva | Reserva 12: fallo al procesar (El cálculo produjo un total inconsistente: 0.0.)
+2026-11-19 21:36:17,224 | DEBUG    | reserva | Fin del intento de procesamiento de la reserva 12
+2026-11-19 21:36:17,224 | ERROR    | main | Operación 18 falló [ReservaError]: No se pudo procesar la reserva 12.
+2026-11-19 21:36:17,224 | ERROR    | main |    Causa original [CalculoInconsistenteError]: El cálculo produjo un total inconsistente: 0.0.
+2026-11-19 21:36:17,224 | DEBUG    | main | Fin de la operación 18
+2026-11-19 21:36:17,224 | INFO     | main | --- Operación 19: Cancelar una reserva y luego intentar confirmarla
+2026-11-19 21:36:17,224 | INFO     | reserva | Reserva 13 creada (cliente 2, servicio 6)
+2026-11-19 21:36:17,224 | INFO     | reserva | Reserva 13 cancelada
+2026-11-19 21:36:17,224 | ERROR    | main | Operación 19 falló [OperacionNoPermitidaError]: Solo se pueden confirmar reservas pendientes.
+2026-11-19 21:36:17,224 | DEBUG    | main | Fin de la operación 19
+2026-11-19 21:36:17,224 | INFO     | main | --- Operación 20: Error INESPERADO: división por cero fuera del dominio
+2026-11-19 21:36:17,224 | ERROR    | main | Operación 20: error inesperado
+Traceback (most recent call last):
+  File "/home/claude/main.py", line 29, in ejecutar
+    resultado = operacion()
+  File "/home/claude/main.py", line 181, in <lambda>
+    lambda: 1 / 0)
+            ~~^~~
+ZeroDivisionError: division by zero
+2026-11-19 21:36:17,230 | DEBUG    | main | Fin de la operación 20
+2026-11-19 21:36:17,230 | INFO     | main | === FIN DE LA SIMULACIÓN === {'exitosas': 8, 'errores_controlados': 11, 'errores_inesperados': 1}
